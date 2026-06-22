@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>About</title>
+  <link rel="stylesheet" href="about.css">
+
+  <!-- 字體 -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="nav">
+    <a href="stopmotion.html">STOPMOTION</a>
+    <a href="poster.html">POSTER</a>
+    <a href="ae.html">AE</a>
+    <a href="maya.html">MAYA</a>
+    <a href="draw.html">DRAW</a>
+    <a href="project.html">PROJECT</a>
+    <a href="index.html">HOME</a>
+</nav>
+<!-- 🔴 HERO -->
+<section class="hero">
+  <h1>HELLO!</h1>
+  <div class="line"></div>
+</section>
+
+<!-- 🧩 主內容 -->
+<section class="container">
+
+  <!-- 左：照片 -->
+  <div class="profile">
+    <img src="image/100227.jpg">
+  </div>
+
+  <!-- ABOUT -->
+  <div class="about box">
+    <h2>ABOUT</h2>
+    <p>
+      哈囉！我是莊珮禛<br>
+      在團體合作中，我喜歡和不同的人交流想法，也擅長溝通協調，
+      讓事情能順利推進並一起完成目標。<br><br>
+
+      因為從高中就開始熱愛繪畫，我很早就確立了往設計領域發展的方向。
+      目前就讀於朝陽科技大學視覺傳達設計系動畫組，
+      持續探索影像與創作的可能性。
+    </p>
+  </div>
+
+  <!-- SKILL -->
+  <div class="skill box">
+    <h2>SKILL</h2>
+    <div class="skill-icons">
+      <img src="image/illustrator.png">
+      <img src="image/photoshop.png">
+      <img src="image/after-effects.png">
+      <img src="image/c.png">
+      <img src="image/m.png">
+    </div>
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="edu box">
+    <h2>EDUCATION</h2>
+    <ul>
+      <li>新竹市立三民國民中學</li>
+      <li>私立義民高級中學 廣告設計系</li>
+      <li>朝陽科技大學 視覺傳達系動畫組</li>
+    </ul>
+  </div>
+
+  <!-- 分隔線 -->
+  <div class="divider"></div>
+
+  <!-- INTEREST -->
+  <div class="interest box">
+    <h2>INTEREST</h2>
+    <div class="icons">
+      <img src="image/food_14716757.png">
+      <img src="image/painting_9252454.png">
+      <img src="image/listen_2781884.png">
+    </div>
+  </div>
+
+</section>
+
+<!-- 裝飾圓 -->
+<div class="circle big"></div>
+<div class="circle small"></div>
+
+<!-- 動畫JS -->
+<script>
+const els = document.querySelectorAll('.box, .profile');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+els.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

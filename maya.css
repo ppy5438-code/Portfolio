@@ -1,0 +1,382 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #c1b8b8;
+  font-family: 'Playfair Display', serif;
+  overflow-x: hidden;
+}
+
+
+/* HERO */
+
+.hero {
+  width: 90%;
+  margin: 40px auto;
+
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.hero-title h1 {
+  font-size: 90px;
+  color: #b30000;
+  margin: 0;
+}
+
+.hero-line {
+  flex: 1;
+  height: 2px;
+  background: #b30000;
+}
+
+
+/* 導覽 */
+
+.nav {
+  position: absolute;
+  top: 30px;
+  right: 80px;
+
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #b30000;
+
+  font-size: 16px;
+  letter-spacing: 2px;
+
+  border: 1px solid #b30000;
+  padding: 8px 18px;
+
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  background: #b30000;
+  color: white;
+}
+
+
+/* 左右裝飾 */
+
+.side-deco {
+  position: fixed;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 12px;
+
+  z-index: 10;
+}
+
+.side-deco.left {
+  left: 25px;
+  top: 220px;
+}
+
+.side-deco.right {
+  right: 25px;
+  bottom: 180px;
+}
+
+.square {
+  width: 28px;
+  height: 28px;
+
+  border: 3px solid #b30000;
+}
+
+.square.filled {
+  background: #b30000;
+}
+
+.side-deco {
+  gap: 18px;
+}
+
+.side-deco span {
+  writing-mode: vertical-rl;
+
+  color: #b30000;
+  font-size: 70px;
+
+  margin-top: 30px;
+}
+
+/* 第一區 */
+
+.maya-gallery {
+  width: 80%;
+  margin: 100px auto;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 80px;
+}
+
+.maya-item img {
+  width: 720px;
+
+  display: block;
+
+  transition: 0.4s;
+}
+
+.maya-item img:hover {
+  transform: scale(1.03);
+
+  filter: brightness(1.1);
+}
+
+
+/* 錯位 */
+
+.maya-item:nth-child(1) {
+  margin-left: 100px;
+}
+
+.maya-item:nth-child(2) {
+  margin-left: 550px;
+}
+
+.maya-item:nth-child(3) {
+  margin-left: 100px;
+}
+
+
+/* 分隔線 */
+
+.divider {
+  width: 90%;
+  height: 2px;
+
+  background: rgb(179, 0, 0);
+
+  margin: 120px auto;
+}
+
+
+/* 第二區 */
+
+.character-section {
+  width: 85%;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  gap: 60px;
+
+  padding-bottom: 15vh;
+}
+
+
+/* =========================
+   🎬 影片作品總區塊
+========================= */
+
+.character-wrapper {
+  width: 85%;
+  margin: 200px auto;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 180px;
+}
+
+
+/* =========================
+   🎬 單個作品
+========================= */
+
+.character-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 80px;
+}
+
+
+/* 第二個作品反方向 */
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+
+/* =========================
+   🎥 影片
+========================= */
+
+.character-video {
+  flex: 1;
+}
+
+.character-video iframe {
+  width: 100%;
+  height: 500px;
+
+  border: none;
+
+  transition: 0.5s;
+}
+
+
+/* Hover 效果 */
+
+.character-video iframe:hover {
+  transform: scale(1.02);
+
+  box-shadow: 20px 20px 0px #b30000;
+}
+
+
+/* =========================
+   📝 文字介紹
+========================= */
+
+.character-text {
+  flex: 0.8;
+
+  color: #b30000;
+
+  border-left: 2px solid #b30000;
+
+  padding-left: 25px;
+}
+
+
+/* 第二個作品右對齊 */
+
+.reverse .character-text {
+  text-align: right;
+
+  border-left: none;
+  border-right: 2px solid #b30000;
+
+  padding-left: 0;
+  padding-right: 25px;
+}
+
+
+.character-text h2 {
+  font-size: 42px;
+
+  margin-bottom: 20px;
+
+  font-family: 'Playfair Display', serif;
+}
+
+
+.character-text p {
+  line-height: 2;
+
+  font-size: 18px;
+}
+
+
+/* =========================
+   ✨ 浮現動畫
+========================= */
+
+.hidden {
+  opacity: 0;
+  transform: translateY(80px);
+
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* 浮現動畫 */
+
+.hidden {
+  opacity: 0;
+  transform: translateY(80px);
+
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* 分隔線動畫 */
+
+.divider.hidden {
+  opacity: 1;
+
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.divider.show {
+  transform: scaleX(1);
+}
+
+
+/* 回頂部按鈕 */
+
+.top-btn {
+  position: fixed;
+
+  right: 40px;
+  bottom: 40px;
+
+  width: 55px;
+  height: 55px;
+
+  border: 2px solid #b30000;
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.5);
+
+  backdrop-filter: blur(5px);
+
+  color: #b30000;
+  font-size: 28px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  z-index: 999;
+
+  opacity: 0;
+  pointer-events: none;
+}
+
+.top-btn:hover {
+  background: #b30000;
+  color: white;
+
+  transform: translateY(-5px);
+
+  box-shadow: 0 0 20px rgba(179,0,0,0.3);
+}

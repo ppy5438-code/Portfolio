@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>MAYA</title>
+
+  <link rel="stylesheet" href="maya.css">
+
+  <!-- 字體 -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+
+  <!-- 左側標題 -->
+  <div class="hero-title">
+    <h1>MAYA</h1>
+  </div>
+
+  <!-- 中間紅線 -->
+  <div class="hero-line"></div>
+
+  <!-- 導覽 -->
+  <nav class="nav">
+    <a href="stopmotion.html">STOPMOTION</a>
+    <a href="poster.html">POSTER</a>
+    <a href="about.html">ABOUT</a>
+    <a href="ae.html">AE</a>
+    <a href="draw.html">DRAW</a>
+    <a href="project.html">PROJECT</a>
+    <a href="index.html">HOME</a>
+  </nav>
+
+</section>
+
+
+<!-- 左側裝飾 -->
+<div class="side-deco left">
+  <div class="square filled"></div>
+  <div class="square"></div>
+  <div class="square filled"></div>
+  <div class="square"></div>
+
+  <span>MAYA</span>
+</div>
+
+
+<!-- 右側裝飾 -->
+<div class="side-deco right">
+  <div class="square filled"></div>
+  <div class="square"></div>
+  <div class="square filled"></div>
+  <div class="square"></div>
+</div>
+
+
+<!-- 第一區：建模作品 -->
+<section class="maya-gallery">
+
+  <div class="maya-item hidden">
+    <img src="image/11118075 2.jpg" alt="">
+  </div>
+
+  <div class="maya-item hidden">
+    <img src="image/wewewewewe4.jpg" alt="">
+  </div>
+
+  <div class="maya-item hidden">
+    <img src="image/images.jpg" alt="">
+  </div>
+
+</section>
+
+
+<!-- 分隔線 -->
+<div class="divider hidden"></div>
+
+
+<!-- 🎬 MAYA 影片作品區 -->
+<section class="character-wrapper">
+
+  <!-- 第一個作品 -->
+  <section class="character-section hidden">
+
+    <!-- 左邊影片 -->
+    <div class="character-video">
+      <iframe
+        src="https://www.youtube.com/embed/AKwePEqoUMI"
+        title="YouTube video"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <!-- 右邊介紹 -->
+    <div class="character-text">
+
+      <h2>角色 UV 貼圖</h2>
+
+      <p>
+      使用 MAYA 製作角色模型，
+      並進行 UV 展開與貼圖繪製。
+      在角色髮型與臉部細節上，
+      花費較多時間調整比例與光影效果，
+      希望能讓角色更具有動畫感。
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- 第二個作品（左右反轉） -->
+  <section class="character-section reverse hidden">
+
+    <!-- 左邊影片 -->
+    <div class="character-video">
+      <iframe
+        src="https://www.youtube.com/embed/hk9az0BBfgA"
+        title="YouTube video"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <!-- 右邊介紹 -->
+    <div class="character-text">
+
+      <h2>場景建模</h2>
+
+      <p>
+        使用 MAYA 建立場景模型，
+        並透過燈光與材質調整，
+        呈現空間氛圍與動畫感。
+      </p>
+
+    </div>
+
+  </section>
+
+</section>
+
+<!-- 回頂部 -->
+<button class="top-btn">
+  ↑
+</button>
+
+
+<!-- JS -->
+<script>
+
+const hiddenElements = document.querySelectorAll('.hidden');
+
+const observer = new IntersectionObserver((entries) => {
+
+  entries.forEach((entry) => {
+
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+
+  });
+
+});
+
+hiddenElements.forEach((el) => observer.observe(el));
+
+
+// 回頂部按鈕
+const topBtn = document.querySelector('.top-btn');
+
+window.addEventListener('scroll', () => {
+
+  if (window.scrollY > 300) {
+    topBtn.style.opacity = '1';
+    topBtn.style.pointerEvents = 'auto';
+  }
+
+  else {
+    topBtn.style.opacity = '0';
+    topBtn.style.pointerEvents = 'none';
+  }
+
+});
+
+
+// 平滑回頂部
+topBtn.addEventListener('click', () => {
+
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+
+});
+
+</script>
+
+
+
+</body>
+</html>
+

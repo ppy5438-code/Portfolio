@@ -1,0 +1,448 @@
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:#c1b8b8;
+  font-family:'Playfair Display',serif;
+  overflow-x:hidden;
+}
+
+.hero{
+
+  width:90%;
+  margin:40px auto;
+
+  display:flex;
+  align-items:center;
+  gap:30px;
+}
+
+.hero-title h1{
+
+  font-size:90px;
+  color:#b30000;
+
+  margin:0;
+}
+
+.hero-line{
+
+  flex:1;
+
+  height:2px;
+
+  background:#b30000;
+}
+
+.nav{
+
+  position:absolute;
+
+  top:30px;
+  right:80px;
+
+  display:flex;
+  gap:20px;
+}
+
+.nav a{
+
+  text-decoration:none;
+
+  color:#b30000;
+
+  border:1px solid #b30000;
+
+  padding:8px 18px;
+
+  transition:.3s;
+}
+
+.nav a:hover{
+
+  background:#b30000;
+
+  color:white;
+}
+
+.video-section{
+
+  width:85%;
+
+  margin:100px auto;
+
+  text-align:center;
+}
+
+.video-section iframe{
+
+  width:100%;
+
+  height:700px;
+
+  border:none;
+}
+
+.video-toggle{
+
+  margin-top:20px;
+
+  background:none;
+
+  border:none;
+
+  color:#b30000;
+
+  font-size:40px;
+
+  cursor:pointer;
+}
+
+#videoText{
+
+  color:#b30000;
+}
+
+.story-section{
+
+  width:85%;
+
+  margin:140px auto;
+
+  display:flex;
+
+  gap:80px;
+
+  align-items:center;
+}
+
+.poster{
+
+  flex:1;
+}
+
+.poster img{
+
+  width:100%;
+}
+
+.story-content{
+
+  flex:1;
+}
+
+.story-content h2{
+
+  color:#b30000;
+
+  font-size:42px;
+}
+
+.story-line{
+
+  width:200px;
+
+  height:2px;
+
+  background:#b30000;
+
+  margin:20px 0 30px;
+}
+
+.story-content p{
+
+  line-height:2;
+
+  color:#b30000;
+}
+
+.character-section{
+
+  width:85%;
+
+  margin:140px auto;
+}
+
+.character-title{
+
+  text-align:center;
+
+  color:#b30000;
+
+  font-size:42px;
+
+  margin-bottom:70px;
+}
+
+.character-container{
+
+  display:flex;
+
+  gap:40px;
+
+  justify-content:center;
+
+  flex-wrap:wrap;
+}
+
+.character-card{
+
+  width:300px;
+
+  text-align:center;
+}
+
+.character-card img{
+
+  width:100%;
+}
+
+.character-card h3{
+
+  color:#b30000;
+
+  font-size:30px;
+}
+
+.char-line{
+
+  width:100px;
+
+  height:2px;
+
+  background:#b30000;
+
+  margin:15px auto;
+}
+
+.character-card p{
+
+  color:#b30000;
+
+  line-height:1.8;
+}
+
+.hidden{
+
+  opacity:0;
+
+  transform:translateY(80px);
+
+  transition:1s;
+}
+
+
+.top-btn {
+  position: fixed;
+
+  right: 40px;
+  bottom: 40px;
+
+  width: 55px;
+  height: 55px;
+
+  border: 2px solid #b30000;
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.5);
+
+  backdrop-filter: blur(5px);
+
+  color: #b30000;
+  font-size: 28px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  z-index: 999;
+
+  opacity: 0;
+  pointer-events: none;
+}
+
+.top-btn:hover {
+  background: #b30000;
+  color: white;
+
+  transform: translateY(-5px);
+
+  box-shadow: 0 0 20px rgba(179,0,0,0.3);
+}
+
+.character-wrapper {
+  width: 85%;
+
+  margin: 80px auto 120px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 120px;
+}
+
+
+/* =========================
+   🎬 單個作品
+========================= */
+
+.project-process {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+
+/* 第二個作品反方向 */
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+
+/* =========================
+   🎥 影片
+========================= */
+
+.character-video {
+  flex: 1;
+}
+
+.character-video iframe {
+  width: 100%;
+  height: 500px;
+
+  border: none;
+
+  transition: 0.5s;
+}
+
+
+/* Hover 效果 */
+
+.character-video iframe:hover {
+  transform: scale(1.02);
+
+  box-shadow: 20px 20px 0px #b30000;
+}
+
+
+/* =========================
+   📝 文字介紹
+========================= */
+
+.character-text {
+  flex: 0.8;
+
+  color: #b30000;
+
+  border-left: 2px solid #b30000;
+
+  padding-left: 25px;
+}
+
+
+/* 第二個作品右對齊 */
+
+.reverse .character-text {
+  text-align: right;
+
+  border-left: none;
+  border-right: 2px solid #b30000;
+
+  padding-left: 0;
+  padding-right: 25px;
+}
+
+
+.character-text h2 {
+  font-size: 42px;
+
+  margin-bottom: 20px;
+
+  font-family: 'Playfair Display', serif;
+}
+
+
+.character-text p {
+  line-height: 2;
+
+  font-size: 18px;
+}
+
+
+/* =========================
+   ✨ 浮現動畫
+========================= */
+
+.hidden {
+  opacity: 0;
+  transform: translateY(80px);
+
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* 浮現動畫 */
+
+.hidden {
+  opacity: 0;
+  transform: translateY(80px);
+
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 第二張角色卡放大 */
+
+.big-card{
+    width: 420px;
+}
+
+.big-card img{
+    transform: scale(1.25);
+    margin-top: 53px;
+    margin-bottom: 60px;
+}
+
+/* =========================
+   UV區塊底板
+========================= */
+
+.uv-block{
+
+    width:85%;
+
+    margin:80px auto 120px;
+
+    padding:50px;
+
+    border-radius:35px;
+
+    background:rgba(255, 255, 255, 0.396);
+
+    border:2px solid rgba(179,0,0,0.2);
+    
+    backdrop-filter: blur(4px);
+}
+

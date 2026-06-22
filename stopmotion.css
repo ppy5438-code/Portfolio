@@ -1,0 +1,257 @@
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:#c1b8b8;
+  font-family:'Playfair Display',serif;
+  overflow-x:hidden;
+}
+
+/* HERO */
+
+.hero{
+  width:90%;
+  margin:40px auto;
+
+  display:flex;
+  align-items:center;
+  gap:30px;
+}
+
+.hero-title h1{
+  margin:0;
+  font-size:90px;
+  color:#b30000;
+}
+
+.hero-line{
+  flex:1;
+  height:2px;
+  background:#b30000;
+}
+
+/* NAV */
+
+.nav{
+  position:absolute;
+  top:30px;
+  right:80px;
+
+  display:flex;
+  gap:20px;
+}
+
+.nav a{
+  text-decoration:none;
+  color:#b30000;
+
+  border:1px solid #b30000;
+  padding:8px 18px;
+
+  transition:.3s;
+}
+
+.nav a:hover{
+  background:#b30000;
+  color:white;
+}
+
+/* 第一支影片 */
+
+.main-video{
+  width:85%;
+  margin:120px auto 80px;
+}
+
+.main-video iframe{
+  width:100%;
+  height:700px;
+  border:none;
+}
+
+/* 短分隔線 */
+
+.short-divider{
+  width:65%;
+  height:2px;
+
+  background:#b30000;
+
+  margin:0 auto 120px;
+}
+
+/* 故事 */
+
+.story{
+  width:70%;
+  margin:auto;
+
+  text-align:center;
+}
+
+.story h2{
+  color:#b30000;
+  font-size:60px;
+
+  font-weight:400;
+
+  margin-bottom:40px;
+}
+
+.story p{
+  color:#b30000;
+
+  font-size:24px;
+  line-height:2.2;
+
+  margin-bottom:20px;
+}
+
+/* 三個點 */
+
+.dot-decoration{
+  text-align:center;
+
+  color:#b30000;
+
+  font-size:60px;
+
+  line-height:0.8;
+
+  margin:100px 0;
+}
+
+/* 圓角卡片 */
+
+.process-card{
+
+  width:70%;
+
+  margin:0 auto 220px;
+
+  border:3px solid #b30000;
+  border-radius:40px;
+  background:rgba(255, 255, 255, 0.396);
+
+  padding:80px;
+
+  text-align:center;
+}
+
+/* 製作過程影片 */
+
+.process-card iframe{
+  width:85%;
+  height:500px;
+
+  border:none;
+}
+
+/* 三角形 */
+
+#videoSwitch{
+
+  border:none;
+  background:none;
+
+  color:#b30000;
+
+  font-size:55px;
+
+  margin:30px 0;
+
+  cursor:pointer;
+
+  transition:.3s;
+}
+
+#videoSwitch:hover{
+  transform:translateY(10px);
+}
+
+/* 主負責 */
+
+.process-card h3{
+  color:#b30000;
+
+  font-size:42px;
+  font-weight:400;
+
+  letter-spacing:3px;
+
+  margin:0;
+}
+
+.process-card p{
+  color:#b30000;
+
+  font-size:24px;
+  line-height:2.2;
+
+  margin-bottom:20px;
+}
+
+/* 浮現動畫 */
+
+.hidden{
+  opacity:0;
+  transform:translateY(80px);
+
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* 回頂部 */
+
+.top-btn{
+
+  position:fixed;
+
+  right:40px;
+  bottom:40px;
+
+  width:55px;
+  height:55px;
+
+  border:2px solid #b30000;
+  border-radius:50%;
+
+  background:rgba(255,255,255,.5);
+  backdrop-filter:blur(5px);
+
+  color:#b30000;
+  font-size:28px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  cursor:pointer;
+
+  transition:.3s;
+
+  opacity:0;
+  pointer-events:none;
+
+  z-index:999;
+}
+
+.top-btn.show-btn{
+  opacity:1;
+  pointer-events:auto;
+}
+
+.top-btn:hover{
+  background:#b30000;
+  color:white;
+
+  transform:translateY(-5px);
+}

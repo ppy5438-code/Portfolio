@@ -1,0 +1,227 @@
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:#c1b8b8;
+  font-family:'Playfair Display',serif;
+  overflow-x:hidden;
+}
+
+/* HERO */
+
+.hero{
+  width:90%;
+  margin:40px auto;
+
+  display:flex;
+  align-items:center;
+  gap:30px;
+}
+
+.hero-title h1{
+  font-size:90px;
+  color:#b30000;
+  margin:0;
+}
+
+.hero-line{
+  flex:1;
+  height:2px;
+  background:#b30000;
+}
+
+/* NAV */
+
+.nav{
+  position:absolute;
+  top:30px;
+  right:80px;
+
+  display:flex;
+  gap:20px;
+}
+
+.nav a{
+  text-decoration:none;
+  color:#b30000;
+
+  border:1px solid #b30000;
+  padding:8px 18px;
+
+  transition:0.3s;
+}
+
+.nav a:hover{
+  background:#b30000;
+  color:white;
+}
+
+/* ===================
+   海報區
+=================== */
+
+.poster-wrapper{
+  width:80%;
+  margin:120px auto 250px;
+
+  display:flex;
+  flex-direction:column;
+}
+
+.poster-item{
+  width:700px;
+
+  display:flex;
+  align-items:flex-end;
+  gap:35px;
+
+  transition:.5s;
+
+  position:relative;
+}
+
+.poster-item:nth-child(2){
+  margin-top:-120px;
+}
+
+.poster-item:nth-child(3){
+  margin-top:-120px;
+}
+
+.poster-item:nth-child(4){
+  margin-top:-120px;
+}
+
+.poster-item.left{
+  align-self:flex-start;
+}
+
+.poster-item.right{
+  align-self:flex-end;
+  flex-direction:row-reverse;
+}
+
+.poster-item img{
+  width:430px;
+
+  box-shadow:
+    20px 20px 0px rgba(179,0,0,.15);
+
+  transition:.5s;
+}
+
+.poster-item:hover img{
+  transform:
+    translateY(-10px)
+    scale(1.03);
+
+  box-shadow:
+    25px 25px 0px rgba(14, 2, 2, 0.396);
+}
+
+.poster-item h2{
+  margin:0;
+
+  color:#b30000;
+
+  font-size:40px;
+  font-family:'Playfair Display',serif;
+  font-weight:400;
+
+  letter-spacing:2px;
+}
+
+.poster-item.left h2{
+  order:-1;
+
+  width:130px;
+
+  text-align:left;
+}
+
+.poster-item.right h2{
+  width:100px;
+
+  text-align:right;
+}
+
+/* ===================
+   vu
+=================== */
+
+
+
+/* ===================
+   浮現動畫
+=================== */
+
+.hidden{
+  opacity:0;
+  transform:translateY(80px);
+
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ===================
+   回頂部按鈕
+=================== */
+
+.top-btn{
+
+  position:fixed;
+
+  right:40px;
+  bottom:40px;
+
+  width:55px;
+  height:55px;
+
+  border:2px solid #b30000;
+  border-radius:50%;
+
+  background:rgba(255,255,255,0.5);
+
+  backdrop-filter:blur(5px);
+
+  color:#b30000;
+  font-size:28px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  cursor:pointer;
+
+  transition:0.3s;
+
+  z-index:999;
+
+  opacity:0;
+  pointer-events:none;
+}
+
+.top-btn:hover{
+
+  background:#b30000;
+  color:white;
+
+  transform:translateY(-5px);
+
+  box-shadow:
+  0 0 20px rgba(179,0,0,0.3);
+}
+
+.top-btn.show-btn{
+  opacity:1;
+  pointer-events:auto;
+}
+

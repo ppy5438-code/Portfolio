@@ -1,0 +1,245 @@
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:#c1b8b8;
+  font-family:'Playfair Display',serif;
+  overflow-x:hidden;
+}
+
+/* HERO */
+
+.hero{
+  width:90%;
+  margin:40px auto;
+
+  display:flex;
+  align-items:center;
+  gap:30px;
+}
+
+.hero-title h1{
+  margin:0;
+
+  font-size:90px;
+  color:#b30000;
+}
+
+.hero-line{
+  flex:1;
+  height:2px;
+  background:#b30000;
+}
+
+/* NAV */
+
+.nav{
+  position:absolute;
+  top:30px;
+  right:80px;
+
+  display:flex;
+  gap:20px;
+}
+
+.nav a{
+  text-decoration:none;
+  color:#b30000;
+
+  border:1px solid #b30000;
+  padding:8px 18px;
+
+  transition:.3s;
+}
+
+.nav a:hover{
+  background:#b30000;
+  color:white;
+}
+
+
+/* =====================
+   DRAW GALLERY
+===================== */
+
+.draw-gallery{
+
+  width:95%;
+  margin:140px auto 220px;
+
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  gap:18px;
+}
+
+/* 長框 */
+
+.draw-item{
+
+  width:90px;
+  height:540px;
+
+  border:4px solid #b30000;
+  border-radius:60px;
+
+  overflow:hidden;
+
+  cursor:pointer;
+
+  transition:.5s;
+}
+
+/* 高低錯落 */
+
+.draw-item.down{
+  margin-top:70px;
+}
+
+/* 圖片 */
+
+.draw-item img{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  transition:.5s;
+}
+
+/* Hover */
+
+.draw-item:hover{
+
+  transform:translateY(-15px);
+}
+
+.draw-item:hover img{
+
+  transform:scale(1.15);
+}
+
+
+/* =====================
+   全螢幕預覽
+===================== */
+
+#preview{
+  position:fixed;
+  inset:0;
+
+  background:rgba(0,0,0,.75);
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  opacity:0;
+  visibility:hidden;
+
+  transition:.3s;
+
+  z-index:9999;
+
+  pointer-events:none;
+}
+
+#preview.show{
+
+  opacity:1;
+  visibility:visible;
+}
+
+#preview img{
+
+  max-width:85vw;
+  max-height:85vh;
+
+  box-shadow:
+  0 30px 80px rgba(0,0,0,.4);
+
+  transform:scale(.9);
+
+  transition:.35s;
+}
+
+#preview.show img{
+  transform:scale(1);
+}
+
+
+/* =====================
+   浮現動畫
+===================== */
+
+.hidden{
+  opacity:0;
+  transform:translateY(80px);
+
+  transition:
+  opacity 1s ease,
+  transform 1s ease;
+}
+
+.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+
+/* =====================
+   回頂部按鈕
+===================== */
+
+.top-btn{
+
+  position:fixed;
+
+  right:40px;
+  bottom:40px;
+
+  width:55px;
+  height:55px;
+
+  border:2px solid #b30000;
+  border-radius:50%;
+
+  background:rgba(255,255,255,.5);
+
+  backdrop-filter:blur(5px);
+
+  color:#b30000;
+  font-size:28px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  cursor:pointer;
+
+  transition:.3s;
+
+  z-index:999;
+
+  opacity:0;
+  pointer-events:none;
+}
+
+.top-btn:hover{
+
+  background:#b30000;
+  color:white;
+
+  transform:translateY(-5px);
+
+  box-shadow:
+  0 0 20px rgba(179,0,0,.3);
+}
+
+.top-btn.show-btn{
+  opacity:1;
+  pointer-events:auto;
+}

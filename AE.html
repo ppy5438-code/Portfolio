@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>AE</title>
+  <link rel="stylesheet" href="ae.css">
+
+  <!-- 字體 -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- 🔴 HERO -->
+<section class="hero">
+
+  <!-- 左側大標 -->
+  <div class="hero-title">
+    <h1>AE</h1>
+  </div>
+
+  <!-- 中間線 -->
+  <div class="hero-line"></div>
+
+  <!-- 右側按鈕 -->
+  <nav class="nav">
+    <a href="stopmotion.html">STOPMOTION</a>
+    <a href="poster.html">POSTER</a>
+    <a href="about.html">自我介紹</a>
+    <a href="maya.html">MAYA</a>
+    <a href="draw.html">DRAW</a>
+    <a href="project.html">PROJECT</a>
+    <a href="index.html">HOME</a>
+  </nav>
+
+</section>
+
+<!-- 🧩 主內容 -->
+<section class="container">
+
+<!-- 作品區 -->
+<section class="work">
+
+  <!-- 左：影片 -->
+  <div class="video-box hidden">
+    <iframe 
+      src="https://www.youtube.com/embed/4PZ0oF2d6Aw"
+      title="YouTube video"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- 右：標題 -->
+<div class="vertical-title hidden">
+  <span>個人作品</span>
+</div>
+
+  <!-- 右下：介紹 -->
+  <div class="description hidden">
+    跟著音樂的節奏轉場變換場景，
+    使用 AE 中的變形製作出各種不同的變換。
+  </div>
+
+  <!-- 分隔線 -->
+<div class="divider hidden"></div>
+
+  <!-- 左：影片 -->
+  <div class="video-box hidden">
+    <iframe 
+      src="https://www.youtube.com/embed/fg_6-bmWLWU"
+      title="YouTube video"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- 右：標題 -->
+<div class="vertical-title hidden">
+  <span>合作作品</span>
+</div>
+
+  <!-- 右下：介紹 -->
+  <div class="description hidden">
+    這是分組合作下完成的作品，而我
+    負責的部分是在組員製作完物件後，
+    在AE中讓物件動起來，
+    接著再由另外一名組員完成配音。
+  </div>
+
+  <div class="divider hidden"></div>
+
+  <!-- 左：影片 -->
+  <div class="video-box hidden">
+    <iframe 
+      src="https://www.youtube.com/embed/Vt3WGtt7TPU"
+      title="YouTube video"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- 右：標題 -->
+<div class="vertical-title hidden">
+  <span>合作作品</span>
+</div>
+
+  <!-- 右下：介紹 -->
+  <div class="description hidden">
+    組員在製作完物件後，我再接著
+    讓物件動起來，而這作品是以有趣的方式
+    來傳達防火知識。
+  </div>
+
+   <div class="divider hidden"></div>
+
+  <!-- 左：影片 -->
+  <div class="video-box hidden">
+    <iframe 
+      src="https://www.youtube.com/embed/Xq3_D_LBpa0"
+      title="YouTube video"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- 右：標題 -->
+<div class="vertical-title hidden">
+  <span>個人作品</span>
+</div>
+
+  <!-- 右下：介紹 -->
+  <div class="description hidden">
+    使用可以在AE綁骨架的外掛來讓
+    角色隨著音樂翩翩起舞。
+  </div>
+
+  
+
+</section>
+
+
+<!-- 裝飾圓 -->
+<div class="circle big"></div>
+<div class="circle small"></div>
+
+
+
+<button class="top-btn">↑</button>
+
+<script>
+
+// 浮現動畫
+const hiddenElements = document.querySelectorAll('.hidden');
+
+const observer = new IntersectionObserver((entries) => {
+
+  entries.forEach((entry) => {
+
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+
+  });
+
+});
+
+hiddenElements.forEach((el) => observer.observe(el));
+
+
+// 回頂部按鈕
+const topBtn = document.querySelector('.top-btn');
+
+window.addEventListener('scroll', () => {
+
+  if (window.scrollY > 300) {
+    topBtn.style.opacity = '1';
+    topBtn.style.pointerEvents = 'auto';
+  }
+
+  else {
+    topBtn.style.opacity = '0';
+    topBtn.style.pointerEvents = 'none';
+  }
+
+});
+
+// 平滑回頂部
+topBtn.addEventListener('click', () => {
+
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+
+});
+
+</script>
+
+</script>
+
+</body>
+</html>

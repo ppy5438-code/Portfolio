@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #F4F5F1;
+}
+
+/* 標題 */
+.title {
+  width: 80%;
+  margin: 40px auto 10px;
+  color: #B6060B;
+}
+
+.title h1 {
+  font-size: 48px;
+  letter-spacing: 2px;
+}
+
+.hero {
+  width: 100%;
+  height: 600px;
+
+  background-image: url("image/未命名-2.png");
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+}
+
+
+
+/* Grid 版面 */
+.grid {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 150px;
+  gap: 10px;
+}
+
+/* 共用區塊 */
+.item {
+  display: block;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: 0.3s;
+}
+
+.item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, rgba(67, 13, 13, 0.505), transparent);
+}
+
+.item:hover .label {
+  opacity: 1;
+}
+
+.label {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  font-size: 30px;
+  letter-spacing: 2px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+/* Hover效果 */
+.item:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+/* 🔴 各區塊（用你自己的圖片替換） */
+
+/* 大圖 */
+.item1 {
+  grid-column: span 2;
+  grid-row: span 2;
+  background-image: url("image/89428.jpg");
+
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* 直長 */
+.item2 {
+  grid-row: span 2;
+  background-image: url("image/小小海報.png");
+
+  clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* 小圖 */
+.item3 {
+  background-image: url("image/89388.jpg");
+}
+
+.item4 {
+  background-image: url("image/螢幕擷取畫面\ 2026-04-24\ 170154.png");
+}
+
+.item5 {
+  grid-column: span 2;
+  background-image: url("image/ae.png");
+
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+}
+
+.item6 {
+  background-image: url("image/images.jpg");
+}
+
+.item7 {
+  background-image: url("image/文字大寫.jpg");
+}
+
+
+/* 底部文字 */
+.footer {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.footer h2 {
+  font-size: 60px;
+  margin: 0;
+}
+
+.footer p {
+  letter-spacing: 3px;
+  color: #555;
+}

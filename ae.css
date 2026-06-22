@@ -1,0 +1,217 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #c1b8b8;
+  font-family: 'Playfair Display', serif;
+  overflow-x: hidden;
+}
+
+.hero h1 {
+  font-size: 80px;
+  color: #b30000;
+}
+
+
+/* 作品區 */
+.work {
+  width: 85%;
+  margin: auto;
+
+   padding-bottom: 15vh;
+
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 40px;
+
+  align-items: center;
+}
+
+/* 影片 */
+.video-box iframe {
+  width: 100%;
+  height: 500px;
+  border: none;
+}
+
+/* 直式標題 */
+.vertical-title {
+  writing-mode: vertical-rl;
+
+  font-size: 80px;
+  color: #b30000;
+
+  border-left: 8px solid #b30000;
+  padding-left: 20px;
+}
+
+.vertical-title span {
+  position: relative;
+  left: -160px; /* 文字往左 */
+}
+
+/* 介紹 */
+.description {
+  grid-column: 2;
+
+  color: #b30000;
+  line-height: 2;
+}
+
+/* 裝飾圓 */
+.circle {
+  position: fixed;
+  border: 2px solid #b30000;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.big {
+  width: 400px;
+  height: 400px;
+  right: -100px;
+  bottom: -100px;
+}
+
+.small {
+  width: 250px;
+  height: 250px;
+  right: 150px;
+  bottom: 50px;
+}
+
+/* HERO */
+.hero {
+  width: 90%;
+  margin: 40px auto;
+
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+
+/* 左邊標題 */
+.hero-title h1 {
+  font-size: 90px;
+  color: #b30000;
+  margin: 0;
+
+  font-family: 'Playfair Display', serif;
+}
+
+/* 中間紅線 */
+.hero-line {
+  flex: 1;
+  height: 2px;
+  background: #b30000;
+}
+
+/* 右邊導覽 */
+.nav {
+  position: absolute;
+  top: 30px;
+  right: 80px;
+
+  display: flex;
+  gap: 20px; /* 按鈕間距 */
+  
+   margin-bottom: 8px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #b30000;
+
+  font-size: 16px;
+  letter-spacing: 2px;
+
+  border: 1px solid #b30000;
+  padding: 8px 18px;
+
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  background: #b30000;
+  color: white;
+}
+
+/* 分隔線 */
+.divider {
+  grid-column: 1 / 4;
+  height: 2px;
+  background: #b30000;
+}
+
+/* 初始狀態 */
+.hidden {
+  opacity: 0;
+  transform: translateY(80px);
+
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+/* 出現後 */
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.divider.hidden {
+  opacity: 1;
+
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.divider.show {
+  transform: scaleX(1);
+}
+
+
+.top-btn {
+  position: fixed;
+
+  right: 40px;
+  bottom: 40px;
+
+  width: 55px;
+  height: 55px;
+
+  border: 2px solid #b30000;
+  border-radius: 50%;
+
+  color: #b30000;
+  text-decoration: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 28px;
+
+  transition: 0.3s;
+
+  background: rgba(255,255,255,0.5);
+
+  backdrop-filter: blur(5px);
+
+  z-index: 999;
+
+  opacity: 0;
+  pointer-events: none;
+
+   cursor: pointer;
+}
+
+.top-btn:hover {
+  background: #b30000;
+  color: white;
+
+  transform: translateY(-5px);
+}
